@@ -1,0 +1,110 @@
+$background-color: #f4c5ff;
+$primary-color: #631076;
+$secondary-color: #822c95;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $background-color;
+}
+
+// Register and Login Pages
+
+.formContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .formWrapper {
+    background-color: #ffffffc1;
+    padding: 20px 60px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+    .logo {
+      color: $primary-color;
+      font-weight: bold;
+      font-size: 2em;
+    }
+
+    .title {
+      color: $secondary-color;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      gap: 15px;
+
+      input {
+        padding: 15px;
+        border: none;
+        border-bottom: 2px solid $background-color;
+        border-radius: 10px;
+        outline: none;
+        background-color: transparent;
+        width: 250px;
+
+        &::placeholder {
+          color: $secondary-color;
+        }
+      }
+
+      button {
+        background-color: $secondary-color;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+
+      label {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        color: $primary-color;
+      }
+
+      p {
+        color: $primary-color;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+// Home page
+
+.home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+   width: 65%;
+   height: 80%;
+   border: 1px solid #000; 
+   border-radius: 10px;
+   display: flex;
+
+   .sidebar {
+    flex: 1;
+   }
+
+   .chat-window {
+    flex: 2;
+   }
+  }
+}
