@@ -1,11 +1,13 @@
-import React from 'react'
-import Cam from '../img/cam.png'
-import Add from '../img/add.png'
-import More from '../img/more.png'
+import React from "react";
+import Cam from "../img/cam.png";
+import Add from "../img/add.png";
+import More from "../img/more.png";
+import Messages from "./Messages";
+import Input from "./Input";
 
 const ChatWindow = () => {
   return (
-    <div className='chat-window'>
+    <div className="chat-window">
       <div className="chat-info">
         <span>Jane</span>
         <div className="chat-icons">
@@ -14,8 +16,10 @@ const ChatWindow = () => {
           <img src={More} alt="" />
         </div>
       </div>
+      <Messages />
+      <Input />
     </div>
-  )
-}
+  );
+};
 
-export default ChatWindow
+export default ChatWindow;
