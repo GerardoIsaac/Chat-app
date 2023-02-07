@@ -3,6 +3,24 @@ $primary-color: #822c95;
 $accent-color: #631076;
 $light-text: #ddddf7;
 
+@mixin mobile {
+  @media  screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -106,6 +124,9 @@ body {
     .sidebar {
       flex: 1;
       background-color: $primary-color;
+      @include mobile {
+        display: none;
+      }
 
       .navbar {
         display: flex;
